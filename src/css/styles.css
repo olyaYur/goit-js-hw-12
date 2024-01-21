@@ -23,3 +23,159 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.input {
+  margin-top: 32px;
+  box-sizing: border-box;
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: none;
+  margin-left: auto;
+  padding: 15px;
+  box-shadow: 1px 1px 1px #6e6666;
+}
+
+img {
+  display: block;
+  border-radius: 8px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 12px;
+  list-style-type: none;
+}
+
+.thumb-block {
+  display: flex;
+  gap: 24px;
+}
+
+.block {
+  margin: 4px auto;
+}
+
+.tittle,
+.amount {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
+}
+
+.amount {
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.form {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 0px #6e6666;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 0px #6e6666;
+}
+
+.loadMore {
+  display: block;
+  transition: 0.3s;
+  margin-top: 32px;
+  outline: none;
+  height: 40px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.btn {
+  transition: 0.3s;
+  margin-top: 32px;
+  outline: none;
+  height: 40px;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-right: auto;
+  cursor: pointer;
+
+}
+
+.gallery img {
+  display: block;
+  width: 360px;
+  height: 200px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+  border-style: dashed solid  solid dotted;
+  border-color: #FF3D00 #FF3D00 transparent #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  left: 40%;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-bottom: 15px;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 20px;
+  top: 31px;
+  border: 10px solid transparent;
+  border-right-color: #FF3D00;
+  transform: rotate(-40deg);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
