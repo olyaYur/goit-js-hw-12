@@ -23,7 +23,7 @@ closeLoader();
 
 loadMoreBtn.classList.add('invisible');
 let currentPage = 1;
-const numberOfImagesPerPage = 40;
+const numberOfResultsPerPage = 40;
 let name = '';
 
 async function searchImages(event) {
@@ -43,7 +43,7 @@ async function searchImages(event) {
       name,
       MY_KEY,
       currentPage,
-      numberOfImagesPerPage
+      numberOfResultsPerPage
     );
 
     if (images.hits.length === 0) {
@@ -66,7 +66,7 @@ async function searchImages(event) {
 
     lightbox.refresh();
 
-    if (images.totalHits > numberOfImagesPerPage) {
+    if (images.totalHits > numberOfResultsPerPage) {
       showLoadMore();
     }
   } catch (error) {
@@ -97,11 +97,11 @@ async function isLoadMore() {
       name,
       MY_KEY,
       currentPage,
-      numberOfImagesPerPage
+      numberOfResultsPerPage
     );
 
     const totalHits = images.totalHits;
-    let countPage = Math.ceil(totalHits / numberOfImagesPerPage);
+    let countPage = Math.ceil(totalHits / numberOfResultsPerPage);
 
     if (currentPage === countPage) {
       hiddenLoadMore();
