@@ -5,8 +5,7 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -42,43 +41,53 @@ img {
   border-radius: 8px;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap ;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 24px;
-  gap: 12px;
-  list-style-type: none;
+  column-gap: 10px;
 }
 
-.thumb-block {
-  display: flex;
-  gap: 24px;
+.gallery img {
+  display: block;
+  width: 360px;
+  height: 200px;
+  border-radius: 8px;
 }
 
-.block {
-  margin: 4px auto;
+.gallery-subtitle {
+  display: block;
 }
 
-.tittle,
-.amount {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  text-align: left;
-
+.gallery-sub-title-number {
+  display: block;
 }
 
-.amount {
-  margin-left: 8px;
-  font-weight: 400;
+.gallery-wrapper{
+display: flex;
+justify-content: space-around;
+}
+
+.gallery-tit-wrap {
+  text-align: center;
+}
+
+
+@media  screen and (min-width: 768px) {
+  .gallery-image {
+  width: 400px;
+}
 }
 
 .form {
   margin-left: auto;
   display: flex;
   gap: 8px;
+  margin-bottom: 30px;
 }
 
 .invisible {

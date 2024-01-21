@@ -6,7 +6,7 @@ export async function getImages(
   currentPage,
   numberOfImagesPerPage
 ) {
-  const searchParams = new URLSearchParams({
+  let searchParams = new URLSearchParams({
     key: MY_KEY,
     per_page: numberOfImagesPerPage,
     page: currentPage,

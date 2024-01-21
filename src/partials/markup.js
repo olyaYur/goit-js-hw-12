@@ -1,39 +1,30 @@
-export function renderPhoto(photos) {
+export function addImages(photos) {
     return photos.reduce(
-      (
-        html,
-        { webformatURL, largeImageURL, tags, likes, views, comments, downloads }
-      ) =>
-        html +
-        ` <li class="gallery-item">
-                
-                <a class="gallery-link" href="${largeImageURL}">
-                    <img
-                    src="${webformatURL}"
-                    alt="${tags}"
-                    width="360"
-                    />
-                </a>    
-            <div class="thumb-block">
-              <div class="block">
-                <h2 class="tittle">Likes</h2>
-                <p class="amount">${likes}</p>
-              </div>
-              <div class="block">
-                <h2 class="tittle">Views</h2>
-                <p class="amount">${views}</p>
-              </div>
-              <div class="block">
-                <h2 class="tittle">Comments</h2>
-                <p class="amount">${comments}</p>
-              </div>
-              <div class="block">
-                <h2 class="tittle">Downloads</h2>
-                <p class="amount">${downloads}</p>
-              </div>
-            </div>              
-         </li>`,
-      ''
+        (html, hit) => html + `
+        <li class="gallery-list">
+          <a class="gallery-link" href="${hit.largeImageURL}">
+            <img class ="gallery-image" src =${hit.webformatURL} alt =${hit.tags} />
+          </a>
+          <span class="gallery-wrapper">
+            <span class="gallery-tit-wrap">  
+              <span class="gallery-subtitle"><b>Likes</b></span>
+              <span class="gallery-sub-title-number">${hit.likes}</span>
+            </span>
+            <span class="gallery-tit-wrap">  
+              <span class="gallery-subtitle"><b>Views</b></span>
+              <span class="gallery-sub-title-number">${hit.views}</span>
+            </span>
+            <span class="gallery-tit-wrap">  
+              <span class="gallery-subtitle"><b>Comments</b></span>
+              <span class="gallery-sub-title-number">${hit.comments}</span>
+            </span>
+            <span class="gallery-tit-wrap">  
+              <span class="gallery-subtitle"><b>Downloads</b></span>
+              <span class="gallery-sub-title-number">${hit.downloads}</span>
+            </span>
+          </span>
+       </li> 
+        `, ""
     );
   }
   
